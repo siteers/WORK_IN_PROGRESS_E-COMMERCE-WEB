@@ -1,0 +1,232 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background: linear-gradient(45deg, #ffffff, #ffffff) fixed;
+    overflow: auto;    
+}
+.sort {
+  font-size:20px;
+}
+.menu {
+  width:100%;
+  position: fixed; /* jest w stalym miejscu */
+  top:0;
+  left:0;
+  padding: 0 0rem;/* zeby elementy nie byly blisko krawedzi */
+  background:  #1f2232;
+  display: flex; /*elementy staja sie elastyczne tzn mozesz uzyc justify content lub align items */
+  flex-direction: row; /* w rzedzie uklad elementow*/
+  justify-content: flex-end; /*wszystkie elementy od konca boxa - czyli prawej */
+  align-items: center; /*na srodku pionowe*/
+  z-index: 2;
+}
+.options {
+  width:350px;
+  height:auto;
+  min-height:750px;
+  position:fixed;
+  top: 65px;
+  left:10;
+  background: linear-gradient(45deg, #f6f38d, #0a4b00) fixed;
+  display:flex;
+  flex-direction: column;
+  padding-left: 30px;
+  align-items:normal;
+  border-radius: 30px;
+  opacity:50%;
+  font-size: 30px;
+  color:black;
+  
+
+}
+/*display jest przy rodzicu */
+/*menu - rodzic */
+
+.menu a {
+  margin:0 1rem; /* ladny odstep margines pomiedzy elementami*/
+  text-decoration: none; /*usuwa podkreslenie z linku */
+  padding: 1rem .5rem; /* margines wewnetrzny 1rem gora/dol 0.5 rem p/l*/
+  color:white;
+  font-size:20px;
+}
+/* klasa menu element a czyli tylko a znajdujace sie w menu */
+
+.dropdown {
+  position:relative; /*po to zeby dac rozwijane menu na absolute - absolute do relative */
+}
+
+.dropdown ul { /* dotyczy calego kontenerwa drop */
+  
+  width:200px; 
+  text-align:center; /*wycentrowanie textu */
+  position:absolute; /* dla dropdownu absolute */
+  background: #373c58; /* kolor tla */
+  padding:0; /* zerowy margines wewnetrzny */
+  list-style-type: none; /* usuwa kropki z listy*/
+  box-shadow: 0px 0px 23px 0px rgba(0,0,0,0,25);
+  margin-top: 10px; /* menu dropdown nachodzi na menu glowne */
+  border-radius: 8px;
+  display:none; /*sprawia ze nie widzimy listy */
+  
+ 
+  
+}
+.dropdown ul li { /* dotyczy pojedynczych elemntow */
+  padding: .5rem;
+  
+}
+
+.dropdown ul li:hover { /* dotyczy najechania na liste - poj elementy*/
+  background: #445bcf;
+  border-radius: 8px;
+ 
+}
+
+.dropdown ul li a { /* nadawane po to zeby a(link) klikalo sie na calym prostokacie*/
+  
+  width:100%;
+  height:100%;
+  display: inline-block;
+  padding: 0;
+  margin:0;
+  color:white;
+  font-size: 20px;
+  
+}
+
+.dropdown a:focus + ul, /* po kliknieciu + ul-style zaaplikowaly sie do ul*/
+.dropdown a:hover + ul, /* po najechaniu =||= */
+.dropdown ul:hover { /* KIEDY KURSOR BEDZIE NA LISCIE - DLATEGO SIE NIE ROBILO XD */
+  display:block; /*teraz sie wyswietla */
+  
+}
+
+
+.products {
+  position:fixed;
+  left:400;
+  top:50;
+  width:auto;
+  height:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  flex-wrap: wrap;
+  z-index:1;
+  overflow: auto;
+  
+}
+.pro {
+  
+  width:300px;
+  height:400px;
+  background: linear-gradient(45deg, #f1e500, #037fdf) fixed;
+  border: 0px solid rgb(143, 143, 143);
+  margin: 50px 40px 120px 20px;
+  border-radius: 5px;
+
+
+}
+.check {
+  float:right;
+  margin:15px;
+}
+
+
+.check {
+  display:none;
+}
+
+.heart {
+  color:rgb(207, 199, 199);
+}
+.heart:hover,
+input:checked + label {
+  color:red;
+  cursor: pointer;
+}
+
+
+/* for styling purpose only */
+.heart {
+  position:absolute;
+  float:right;
+  font-size: 50px;
+  margin:15px;
+  margin-top: 0;
+  
+}
+.opis {
+  position:relative;
+  top:101%;
+}
+
+#product1 {
+  background: url("fotos/1a.jpg") no-repeat center;
+  cursor: pointer;
+}
+
+#product1:hover {
+  background: url("fotos/1b.jpg") no-repeat center;
+  transition: 1s linear;
+  cursor: pointer;
+
+}
+
+#product2 {
+  background: url("fotos/2a.jpg") no-repeat center;
+  cursor: pointer;
+}
+
+#product2:hover {
+  background: url("fotos/2b.jpg") no-repeat center;
+  transition: 1s linear;
+  cursor: pointer;
+}
+
+#product3 {
+  background: url("fotos/3a.jpg") no-repeat center;
+  cursor: pointer;
+}
+
+#product3:hover {
+  background: url("fotos/3b.jpg") no-repeat center;
+  transition: 1s linear;
+  cursor: pointer;
+}
+
+#product4 {
+  background: url("fotos/4a.jpg") no-repeat center;
+  cursor: pointer;
+}
+
+#product4:hover {
+  background: url("fotos/4b.jpg") no-repeat center;
+  transition: 1s linear;
+  cursor: pointer;
+}
+
+#product5 {
+  background: url("fotos/5a.jpg") no-repeat center;
+  cursor: pointer;
+}
+
+#product5:hover {
+  background: url("fotos/5b.jpg") no-repeat center;
+  transition: 1s linear;
+  cursor: pointer;
+}
+
+#product6 {
+  background: url("fotos/6a.jpg") no-repeat center;
+  cursor: pointer;
+}
+
+#product6:hover {
+  background: url("fotos/6b.jpg") no-repeat center;
+  transition: 1s linear;
+  cursor: pointer;
+}
